@@ -47,7 +47,14 @@ function Login() {
           <br />
           <button>Login</button>
         </form>
-        <a>Signup</a>
+        <a
+          style={{ color: "blue", textDecoration: "underline" }}
+          onClick={() => {
+            history.push("/signup");
+          }}
+        >
+          Signup
+        </a>
       </div>
     </div>
   );

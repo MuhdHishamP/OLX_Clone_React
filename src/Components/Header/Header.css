@@ -82,11 +82,12 @@
   height: 48px;
   display: flex;
   align-items: center;
+  cursor: default;
 }
 
 .language span {
-  /* justify-content: space-between;
-  align-items: center; */
+  justify-content: space-between;
+  align-items: center;
   font-size: 15px;
   white-space: normal;
   text-overflow: ellipsis;
@@ -94,8 +95,8 @@
   margin-right: 5px;
 }
 
-.language svg {
-}
+/* .language svg {
+} */
 
 .span {
   text-decoration: none;
@@ -106,13 +107,17 @@
   margin-right: 5px;
 }
 
+.loginPage {
+  cursor: pointer;
+}
+
 .loginPage hr {
   margin: 0;
   background-color: black;
   height: 2px;
 }
 
-.loginPage a{
+.loginPage a {
   text-decoration: none;
 }
 
@@ -161,4 +166,8 @@
   .sellMenu {
     display: none;
   }
+}
+
+.brandName {
+  cursor: pointer;
 }

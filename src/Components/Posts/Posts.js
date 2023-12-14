@@ -31,7 +31,7 @@ function Posts() {
       <div className="moreView">
         <div className="heading">
           <span>Quick Menu</span>
-          <span>View more</span>
+          <span style={{cursor:"default"}}>View more</span>
         </div>
         <div className="cards">
           {products.map((product) => (

@@ -39,7 +39,7 @@ const Create = () => {
   return (
     <Fragment>
       <Header />
-      <card>
+      <card className="createCard">
         <div className="centerDiv">
           <form>
             <label htmlFor="fname">Name</label>

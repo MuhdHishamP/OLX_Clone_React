@@ -11,7 +11,8 @@ import { useHistory } from "react-router-dom";
 function Header() {
   const { user } = useContext(AuthContext);
   const { firebase } = useContext(FirebaseContext);
-  const history = useHistory()
+  const history = useHistory();
+  console.log(user);
 
   return (
     <div className="headerParentDiv">
@@ -39,22 +40,29 @@ function Header() {
           <span> ENGLISH </span>
           <Arrow></Arrow>
         </div>
-        <div className="loginPage">
-          <span>{user ? "Welcome," + " " + user.displayName : "Login"}</span>
+        <div className="loginPage" onClick={() => history.push("/login")}>
+          <span>{user ? "Welcome, " + user.displayName : "Login"}</span>
           <hr />
         </div>
+
         {user && (
           <span
+            style={{ cursor: "pointer" }}
             onClick={() => {
               firebase.auth().signOut();
-              history.push('/login')
+              history.push("/login");
             }}
           >
             Logout
           </span>
         )}
 
-        <div className="sellMenu">
+        <div
+          className="sellMenu"
+          onClick={() =>
+            user ? history.push("/create") : history.push("/login")
+          }
+        >
           <SellButton></SellButton>
           <div className="sellMenuContent">
             <SellButtonPlus></SellButtonPlus>
