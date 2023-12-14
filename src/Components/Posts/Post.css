@@ -41,6 +41,10 @@
   cursor: pointer;
 }
 
+.recommendations .card{
+  cursor: default;
+}
+
 .card .favorite {
   display: flex;
   justify-content: flex-end;

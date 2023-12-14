@@ -29,7 +29,7 @@ function Header() {
           <div className="input">
             <input
               type="text"
-              placeholder="Find car,mobile phone and more..."
+              placeholder="Find Cars,Mobile Phones and more..."
             />
           </div>
           <div className="searchAction">

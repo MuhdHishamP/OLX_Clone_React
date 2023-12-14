@@ -14,9 +14,8 @@ const Create = () => {
   const [Price, setPrice] = useState("");
   const [Image, setImage] = useState(null);
   const date = new Date();
-  const history = useHistory()
+  const history = useHistory();
   const handleSubmit = (e) => {
-    e.preventDefault();
     firebase
       .storage()
       .ref(`/image/${Image.name}`)
@@ -34,7 +33,8 @@ const Create = () => {
           });
         });
       });
-  history.push("/")};
+      history.push("/");
+  };
 
   return (
     <Fragment>

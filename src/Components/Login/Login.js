@@ -10,7 +10,6 @@ function Login() {
   const { firebase } = useContext(FirebaseContext);
   const history = useHistory();
   const handleSubmit = (e) => {
-    e.preventDefault();
     firebase
       .auth()
       .signInWithEmailAndPassword(Email, Password)
