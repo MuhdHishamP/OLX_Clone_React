@@ -18,7 +18,7 @@ function Posts() {
       .collection("products")
       .get()
       .then((snapshot) => {
-        const allposts = snapshot.docs.map((product) => ({
+        const allposts = snapshot.docs.map((product) => ( {
           ...product.data(),
           id: product.id,
         }));
@@ -78,7 +78,7 @@ function Posts() {
               <p className="name"> YAMAHA R15V3</p>
             </div>
             <div className="date">
-              <span>10/5/2021</span>
+              <span>Thu Dec 4 2023</span>
             </div>
           </div>
           <div className="card">
@@ -97,7 +97,7 @@ function Posts() {
               <p className="name"> iPhone 13</p>
             </div>
             <div className="date">
-              <span>10/5/2021</span>
+              <span>Mon Dec 20 2023</span>
             </div>
           </div>
           {/* <div className="card">
