@@ -100,7 +100,7 @@ function Posts() {
               <span>10/5/2021</span>
             </div>
           </div>
-          <div className="card">
+          {/* <div className="card">
             <div className="favorite">
               <Heart></Heart>
             </div>
@@ -118,8 +118,8 @@ function Posts() {
             <div className="date">
               <span>10/5/2021</span>
             </div>
-          </div>
-          <div className="card">
+          </div> */}
+          {/* <div className="card">
             <div className="favorite">
               <Heart></Heart>
             </div>
@@ -137,8 +137,8 @@ function Posts() {
             <div className="date">
               <span>10/5/2021</span>
             </div>
-          </div>
-          <div className="card">
+          </div> */}
+          {/* <div className="card">
             <div className="favorite">
               <Heart></Heart>
             </div>
@@ -156,7 +156,7 @@ function Posts() {
             <div className="date">
               <span>10/5/2021</span>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

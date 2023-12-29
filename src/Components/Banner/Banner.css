@@ -2,7 +2,7 @@
 
 .bannerParentDiv {
   cursor: default;
-  padding-top: 4em;
+  padding-top: 4rem;
 }
 /* .bannerParentDiv .bannerChildDiv {
 } */
@@ -41,7 +41,7 @@
   .otherQuickOptions {
     display: none;
   }
-  .bannerChildDiv .banner {
+  /* .bannerChildDiv .banner {
     position: relative;
-  }
+  } */
 }

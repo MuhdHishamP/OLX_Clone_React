@@ -10,6 +10,7 @@
 }
 
 .loginParentDiv .input {
+  border: 1px solid black;
   border-top-color: transparent;
   border-left-color: transparent;
   border-right-color: transparent;
@@ -19,7 +20,7 @@
 .loginParentDiv button {
   width: 100%;
   height: 48px;
-  /* border-color: transparent; */
+  border-color: transparent;
   background-color: #002f34;
   color: whitesmoke;
   font-weight: 900;
@@ -34,8 +35,8 @@
 .loginParentDiv a {
   display: flex;
   justify-content: center;
+  cursor: pointer;
+
 }
 
-.loginParentDiv a:hover {
-  cursor: pointer;
-}
+

@@ -14,6 +14,7 @@ export default function Signup() {
   const { firebase } = useContext(FirebaseContext);
 
   const handleSubmit = (e) => {
+    e.preventDefault();
     firebase
       .auth()
       .createUserWithEmailAndPassword(Email, Password)
@@ -36,7 +37,7 @@ export default function Signup() {
     <div>
       <div className="signupParentDiv">
         <img width="200px" height="200px" src={Logo}></img>
-        <form onSubmit={handleSubmit} style={{marginBottom:15}}>
+        <form onSubmit={handleSubmit} style={{ marginBottom: 15 }}>
           <label htmlFor="fname">Username</label>
           <br />
           <input
@@ -68,7 +69,6 @@ export default function Signup() {
             name="phone"
             value={Phone}
             onChange={(e) => setPhone(e.target.value)}
-            defaultValue="Doe"
           />
           <br />
           <label htmlFor="lname">Password</label>
@@ -80,13 +80,17 @@ export default function Signup() {
             value={Password}
             onChange={(e) => setPassword(e.target.value)}
             name="password"
-            defaultValue="Doe"
           />
           <br />
           <br />
           <button>Signup</button>
         </form>
-        <a style={{ color: "blue", textDecoration: "underline" }} onClick={()=>history.push("/login")}>Login</a>
+        <a
+          style={{ color: "blue", textDecoration: "underline" }}
+          onClick={() => history.push("/login")}
+        >
+          Login
+        </a>
       </div>
     </div>
   );

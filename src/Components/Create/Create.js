@@ -15,14 +15,13 @@ const Create = () => {
   const [Image, setImage] = useState(null);
   const date = new Date();
   const history = useHistory();
-  const handleSubmit = (e) => {
+  const handleSubmit = () => {
     firebase
       .storage()
       .ref(`/image/${Image.name}`)
       .put(Image)
       .then(({ ref }) => {
         ref.getDownloadURL().then((url) => {
-          console.log(url);
           firebase.firestore().collection("products").add({
             name,
             Category,
@@ -33,11 +32,11 @@ const Create = () => {
           });
         });
       });
-      history.push("/");
+    history.push("/");
   };
 
   return (
-    <Fragment>
+    <>
       <Header />
       <card className="createCard">
         <div className="centerDiv">
@@ -82,6 +81,7 @@ const Create = () => {
                 width="200px"
                 height="200px"
                 src={URL.createObjectURL(Image)}
+                style={{ marginBottom: 10 }}
               ></img>
             )}
             <br />
@@ -93,7 +93,7 @@ const Create = () => {
           </form>
         </div>
       </card>
-    </Fragment>
+    </>
   );
 };
 

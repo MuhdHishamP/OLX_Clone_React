@@ -12,7 +12,6 @@ function Header() {
   const { user } = useContext(AuthContext);
   const { firebase } = useContext(FirebaseContext);
   const history = useHistory();
-  console.log(user);
 
   return (
     <div className="headerParentDiv">
@@ -50,7 +49,7 @@ function Header() {
             style={{ cursor: "pointer" }}
             onClick={() => {
               firebase.auth().signOut();
-              history.push("/login");
+              history.push("/");
             }}
           >
             Logout
